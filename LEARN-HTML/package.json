@@ -1,0 +1,12 @@
+{
+  "name": "learn-html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "build": "tsc -w"
+  }
+}

@@ -1,0 +1,20 @@
+html {
+  font-family: "Courier New", Courier, monospace;
+  margin: 1em;
+}
+
+address {
+  padding: 1em;
+}
+
+details {
+  background-color: #ff6666;
+  padding: 1em;
+}
+
+details[open] {
+  border: solid 1px #cccccc;
+  -webkit-filter: drop-shadow(0 0 5px #cccccc);
+          filter: drop-shadow(0 0 5px #cccccc);
+}
+/*# sourceMappingURL=elements.css.map */
