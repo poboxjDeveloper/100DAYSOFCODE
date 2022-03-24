@@ -15,14 +15,13 @@ function calc(x, y) {
 }
 console.log("calc(7,7)", calc(7, 7));
 function calcObject(o) {
-    var result;
+    var result = 1;
     Object.keys(o).map(function (key) {
-        console.log(key, o[key], typeof key);
-        if (typeof key === "number") {
-            result * o[key];
+        console.log("key", key, "value", o[key], typeof o[key]);
+        if (typeof o[key] === "number") {
+            result = result * o[key];
         }
     });
     return result;
 }
-console.log(calcObject({ first: 2, second: 2, third: "third" }));
-console.log(calcObject(new obj, { firs: firs }));
+console.log(calcObject({ first: 2, second: 2 }));

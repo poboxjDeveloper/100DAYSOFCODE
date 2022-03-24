@@ -25,19 +25,20 @@ function calc(x: number, y: number): number {
 
 console.log("calc(7,7)", calc(7, 7));
 
-function calcObject(o: object): number {
-  let result: number;
+interface CalculatedObject {
+  first: number;
+  second: number;
+}
+
+function calcObject(o: CalculatedObject): number {
+  let result: number = 1;
   Object.keys(o).map((key) => {
-    console.log(key, o[key], typeof key);
-    if (typeof key === "number") {
-      result * o[key];
+    console.log("key", key, "value", o[key], typeof o[key]);
+    if (typeof o[key] === "number") {
+      result = result * o[key];
     }
   });
   return result;
 }
 
-console.log(calcObject({ first: 2, second: 2, third: "third" }));
-
-type obj = { first: number; second: number; third: string };
-
-console.log(calcObject(new obj{firs}))
+console.log(calcObject({ first: 2, second: 2 }));
