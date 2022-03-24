@@ -16,16 +16,68 @@
   <body>
     <div id="app">
       <section>
+        <h2>&lt;base&gt;</h2>
+        <p>
+          The base HTML element specifies the base URL to use for all relative
+          URLs in a document. There can be only one <base /> element in a
+          document.
+        </p>
+        <p>
+          A document's used base URL can be accessed by scripts with
+          Node/baseURI. If the document has no <base /> elements, then baseURI
+          defaults to location.href.
+        </p>
+        <!-- <base target="_self" href="http://localhost:5500/" /> -->
+        <base target="_self" href="https://www.test-aankoop.be/" />
+      </section>
+      <section>
         <h2>&lt;address&gt;</h2>
-        <p>The user agent styles this in a way.</p>
+        <p>
+          The address element indicates that the enclosed HTML provides contact
+          information for a person or people, or for an organization.
+        </p>
         <address>
           <a href="mailto:jschelstraete@test-aankoop.be"
             >jschelstraete@test-aankoop.be</a
           >
           <a href="tel:+3227904119">+32 2 790 41 19</a>
+          <a href="http://www.test-aankoop.be">www.test-aankoop.be</a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base"
+            >base tag</a
+          >
+          <a href="#this-should-be-on-the-test-aankoop-website"
+            >relative url (should redirect to www.test-aankoop.be#)</a
+          >
         </address>
       </section>
 
+      <section>
+        <h2>&lt;article&gt;</h2>
+        <p>
+          The article HTML element represents a self-contained composition in a
+          document, page, application, or site, which is intended to be
+          independently distributable or reusable (e.g., in syndication).
+          Examples include: a forum post, a magazine or newspaper article, or a
+          blog entry, a product card, a user-submitted comment, an interactive
+          widget or gadget, or any other independent item of content.
+        </p>
+        <article class="forecast">
+          <h1>Weather forecast for Seattle</h1>
+          <article class="day-forecast">
+            <h2>03 March 2018</h2>
+            <p>Rain.</p>
+          </article>
+          <article class="day-forecast">
+            <h2>04 March 2018</h2>
+            <p>Periods of rain.</p>
+          </article>
+          <article class="day-forecast">
+            <h2>05 March 2018</h2>
+            <p>Heavy rain.</p>
+          </article>
+        </article>
+      </section>
       <section>
         <h2>&lt;details&gt;</h2>
         <p>The user agent styles this in a way.</p>

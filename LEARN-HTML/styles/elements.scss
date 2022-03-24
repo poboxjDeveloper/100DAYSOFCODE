@@ -1,4 +1,4 @@
-$main-color: #ff0000;
+$red: #ff0000;
 $black: #000;
 
 html {
@@ -8,10 +8,21 @@ html {
 
 address {
   padding: 1em;
+  background-color: lighten($color: $red, $amount: 10%);
+}
+
+article {
+  background-color: lighten($red, 20%);
+  padding: 1em;
+
+  article {
+    background-color: desaturate($color: $red, $amount: 5%);
+    margin: 1em;
+  }
 }
 
 details {
-  background-color: lighten($main-color, 20%);
+  background-color: lighten($red, 30%);
   padding: 1em;
 }
 
