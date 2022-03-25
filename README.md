@@ -13,3 +13,7 @@ This is the aim... this is the challenge.
 ## Tools
 
 - [Convert C# to Typescript](https://csharptotypescript.azurewebsites.net/)
+
+## Things to checkout
+
+- [Custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
