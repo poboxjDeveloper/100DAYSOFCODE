@@ -15,7 +15,7 @@ export interface SearchResult {
 
 export interface Model<T> {
   items: T[] | undefined;
-  getItems: () => Promise<T[]>;
+  getItems: () => Promise<T[]> | undefined;
   getItemById: (id: string) => T | undefined;
 }
 
