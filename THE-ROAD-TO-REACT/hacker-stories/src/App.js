@@ -1,8 +1,11 @@
 import "./App.css";
-import ListWithUnstableIndex from "./ListWithUnstableIndex";
-import ListWithStableIndex from "./ListWithStableIndex";
+import ListWithUnstableIndex from "./components/ListWithUnstableIndex";
+import ListWithStableIndex from "./components/ListWithStableIndex";
+import List from "./components/List";
+import Search from "./components/Search";
+import GlobalVariableConsumer from "./components/GlobalVariableConsumer";
 
-const title = "this is the title";
+const title = "this is the title constant";
 
 function getTitle(title) {
   return title;
@@ -10,7 +13,7 @@ function getTitle(title) {
 
 const welcome = {
   greeting: "Hey",
-  title: "React",
+  title: "React from the welcome object",
 };
 
 const list = [
@@ -38,41 +41,58 @@ function App() {
       <h1>
         {welcome.greeting}, {welcome.title}, {getTitle(title)}
       </h1>
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
 
-      <hr />
+      <section>
+        <h2>Inline JSX</h2>
+        <label htmlFor="search">Search: </label>
+        <input id="search" type="text" />
 
-      <ul>
-        {list.map(function (item) {
-          return <li>{item.title}</li>;
-        })}
-      </ul>
+        <hr />
 
-      <ul>
-        {list.map((item) => {
-          return <li key={item.objectID}>{item.title}</li>;
-        })}
-      </ul>
+        <ul>
+          {list.map(function (item) {
+            return <li>{item.title}</li>;
+          })}
+        </ul>
 
-      <ul>
-        {list.map(function (item) {
-          return (
-            <li key={item.objectID}>
-              <span>
-                <a href={item.url}>{item.title}</a>
-              </span>
-              <span>{item.author}</span>
-              <span>{item.num_comments}</span>
-              <span>{item.points}</span>
-            </li>
-          );
-        })}
-      </ul>
+        <ul>
+          {list.map((item) => {
+            return <li key={item.objectID}>{item.title}</li>;
+          })}
+        </ul>
 
-      <ListWithUnstableIndex />
+        <ul>
+          {list.map(function (item) {
+            return (
+              <li key={item.objectID}>
+                <span>
+                  <a href={item.url}>{item.title}</a>
+                </span>
+                <span>{item.author}</span>
+                <span>{item.num_comments}</span>
+                <span>{item.points}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
 
-      <ListWithStableIndex />
+      <section>
+        <h2>List components</h2>
+        <ListWithUnstableIndex />
+        <ListWithStableIndex />
+        <List list={list} />
+      </section>
+
+      <section>
+        <h2>Search component</h2>
+        <Search />
+      </section>
+
+      <section>
+        <h2>Tests and development </h2>
+        <GlobalVariableConsumer />
+      </section>
     </div>
   );
 }

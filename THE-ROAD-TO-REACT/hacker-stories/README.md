@@ -50,3 +50,14 @@ So if const is used most often, because it doesn't give you the ability to re-as
 
 - use **key** in dynamic content. [info](https://www.robinwieruch.de/react-list-key/) !!! Important for ordering.
 - [Array object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+## Components
+
+**Hierarchies**:
+
+- APP (parent or Root component)
+  - List (child component of App) / (parent component of Item)
+    - Item (child or leaf component)
+  - Search (child component of App)
+
+List and search are Sibling components
