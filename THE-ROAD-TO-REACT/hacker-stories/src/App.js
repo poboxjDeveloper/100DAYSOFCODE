@@ -35,6 +35,33 @@ const list = [
   },
 ];
 
+const stories = [
+  {
+    title: "React",
+    url: "https://reactjs.org/",
+    author: "Jordan Walke",
+    num_comments: 3,
+    points: 4,
+    objectID: 0,
+  },
+  {
+    title: "Redux",
+    url: "https://redux.js.org/",
+    author: "Dan Abramov, Andrew Clark",
+    num_comments: 2,
+    points: 5,
+    objectID: 1,
+  },
+  {
+    title: "Yet another",
+    url: "https://tinehens.be/",
+    author: "Tine Hens",
+    num_comments: 2,
+    points: 5,
+    objectID: 2,
+  },
+];
+
 function App() {
   return (
     <div>
@@ -49,11 +76,11 @@ function App() {
 
         <hr />
 
-        <ul>
+        {/* <ul>
           {list.map(function (item) {
             return <li>{item.title}</li>;
           })}
-        </ul>
+        </ul> */}
 
         <ul>
           {list.map((item) => {
@@ -81,7 +108,7 @@ function App() {
         <h2>List components</h2>
         <ListWithUnstableIndex />
         <ListWithStableIndex />
-        <List list={list} />
+        <List list={stories} />
       </section>
 
       <section>

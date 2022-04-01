@@ -61,3 +61,36 @@ So if const is used most often, because it doesn't give you the ability to re-as
   - Search (child component of App)
 
 List and search are Sibling components
+
+## React DOM
+
+Renders a component
+
+```javascript
+import * as React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+This can be used directly
+
+```javascript
+ReactDOM.render(<h1>Hello React World</h1>, document.getElementById("root"));
+```
+
+## Arrow functions
+
+[Info](https://devdocs.io/javascript/functions/arrow_functions)
+
+Always return som
+
+## Events
+
+[GlobalEventHandlers](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers)
+
+## React Hooks
+
+[useState](https://www.robinwieruch.de/react-usestate-hook/)
