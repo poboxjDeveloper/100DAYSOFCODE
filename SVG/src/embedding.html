@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Embedding svg on a page...</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <nav class="back"><a href="index.html">back</a></nav>
+
+    <div class="container">
+      <h1>Embedding on a page...</h1>
+      <div>
+        <h2>
+          As Image (not the way to go apparently as this is not supported in all
+          browsers)
+        </h2>
+        <img src="images/embedding.svg" alt="demo1" />
+      </div>
+      <div>
+        <h2>As object</h2>
+        <object data="images/embedding.svg" type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <div>
+      <h2>Directly into the page</h2>
+      <svg
+        version="1.1"
+        width="300"
+        height="200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="100%" height="100%" fill="blue" />
+
+        <circle cx="150" cy="100" r="80" fill="green" />
+
+        <text
+          x="150"
+          y="125"
+          font-size="60"
+          text-anchor="middle"
+          fill="white"
+          font-family="verdana"
+        >
+          SVG
+        </text>
+      </svg>
+    </div>
+
+    <div>
+      <h2>Insert it with javascript</h2>
+      <p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction"
+          >see tutorial</a
+        >
+      </p>
+    </div>
+
+    <!-- As iframe does not work in Chrome -->
+    <!-- <iframe src="images/embedding.svg"></iframe> -->
+  </body>
+</html>

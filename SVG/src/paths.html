@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SVG tutorial | Paths</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <nav class="back"><a href="index.html">back</a></nav>
+
+    <div>
+      <h1>Paths</h1>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths"
+        >see tutorial</a
+      >
+      <section>
+        <h2>Paths</h2>
+
+        <div>
+          <h3>d parameter</h3>
+          <p>d defines a path to be drawn</p>
+
+          <code>
+            &lt;svg viewBox=&quot;0 0 100 100&quot;
+            xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;<br />
+            &emsp;&emsp;&lt;path fill=&quot;none&quot; stroke=&quot;red&quot;<br />
+            &emsp;&emsp;&emsp;&emsp;d=&quot;M 10,30<br />
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A 20,20 0,0,1 50,30<br />
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A 20,20 0,0,1 90,30<br />
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Q 90,60 50,90<br />
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Q 10,60 10,30 z&quot;
+            /&gt;<br />
+            &lt;/svg&gt;
+          </code>
+          <div>
+            <style>
+              #paths-sample1:hover path {
+                cursor: not-allowed;
+                d: path(
+                  "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
+                );
+              }
+            </style>
+            <svg
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              id="paths-sample1"
+            >
+              <path
+                fill="none"
+                stroke="red"
+                d="M 10,30
+                     A 20,20 0,0,1 50,30
+                     A 20,20 0,0,1 90,30
+                     Q 90,60 50,90
+                     Q 10,60 10,30 z"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Path commands</h2>
+        <div>
+          <p>
+            <em
+              ><strong>Note:</strong> Commands are case-sensitive. An upper-case
+              command specifies absolute coordinates, while a lower-case command
+              specifies coordinates relative to the current position.</em
+            >
+          </p>
+          <ul>
+            <li>MoveTo: <code>M</code>, <code>m</code></li>
+            <li>
+              LineTo: <code>L</code>, <code>l</code>, <code>H</code>,
+              <code>h</code>, <code>V</code>, <code>v</code>
+            </li>
+            <li>
+              Cubic Bézier Curve: <code>C</code>, <code>c</code>,
+              <code>S</code>, <code>s</code>
+            </li>
+            <li>
+              Quadratic Bézier Curve: <code>Q</code>, <code>q</code>,
+              <code>T</code>, <code>t</code>
+            </li>
+            <li>Elliptical Arc Curve: <code>A</code>, <code>a</code></li>
+            <li>ClosePath: <code>Z</code>, <code>z</code></li>
+          </ul>
+          <p></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Sample Bezier curves</h2>
+        <div>
+          <p></p>
+
+          <p>
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 10 10 C 20 20, 40 20, 50 10"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 70 10 C 70 20, 110 20, 110 10"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 130 10 C 120 20, 180 20, 170 10"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 10 60 C 20 80, 40 80, 50 60"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 70 60 C 70 80, 110 80, 110 60"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 130 60 C 120 80, 180 80, 170 60"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 10 110 C 20 140, 40 140, 50 110"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 70 110 C 70 140, 110 140, 110 110"
+                stroke="black"
+                fill="transparent"
+              />
+              <path
+                d="M 130 110 C 120 140, 180 140, 170 110"
+                stroke="black"
+                fill="transparent"
+              />
+            </svg>
+          </p>
+          <p>
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
+                stroke="black"
+                fill="transparent"
+              />
+            </svg>
+          </p>
+          <p>
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 10 80 Q 95 10 180 80"
+                stroke="black"
+                fill="transparent"
+              />
+            </svg>
+          </p>
+          <p>
+            <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 10 80 Q 52.5 10, 95 80 T 180 80"
+                stroke="black"
+                fill="transparent"
+              />
+            </svg>
+          </p>
+
+          <p>
+            <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M 10 315
+                         L 110 215
+                         A 30 50 0 0 1 162.55 162.45
+                         L 172.55 152.45
+                         A 30 50 -45 0 1 215.1 109.9
+                         L 315 10"
+                stroke="black"
+                fill="green"
+                stroke-width="2"
+                fill-opacity="0.5"
+              />
+            </svg>
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+              <path
+                d="M 10 315
+                         L 110 215
+                         A 36 60 0 0 1 150.71 170.29
+                         L 172.55 152.45
+                         A 30 50 -45 0 1 215.1 109.9
+                         L 315 10"
+                stroke="black"
+                fill="green"
+                stroke-width="2"
+                fill-opacity="0.5"
+              />
+              <circle cx="150.71" cy="170.29" r="2" fill="red" />
+              <circle cx="110" cy="215" r="2" fill="red" />
+              <ellipse
+                cx="144.931"
+                cy="229.512"
+                rx="36"
+                ry="60"
+                fill="transparent"
+                stroke="blue"
+              />
+              <ellipse
+                cx="115.779"
+                cy="155.778"
+                rx="36"
+                ry="60"
+                fill="transparent"
+                stroke="blue"
+              />
+            </svg>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="svg-bg-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        version="1.1"
+      >
+        <path d="M 0,0 L 100,100" fill="none" stroke="red" />
+
+        <path
+          fill="none"
+          stroke="red"
+          d="M 10,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10"
+        />
+
+        <!-- move the cursor -->
+        <path d="M 300 500" />
+
+        <!-- draw a cube -->
+        <path d="M 10 10 H 90 V 90 H 10 L 10 10" fill="yellow" />
+        <path
+          d="M 100 100 H 190 V 190 H 100 Z"
+          fill="transparent"
+          stroke="blue"
+        />
+
+        <!-- relative cube -->
+        <path
+          d="M 600 600 h 80 v 80 h -80 Z"
+          fill="transparent"
+          stroke="black"
+        />
+
+        <!-- Points -->
+        <circle cx="300" cy="500" r="20" fill="red" />
+      </svg>
+    </div>
+  </body>
+</html>

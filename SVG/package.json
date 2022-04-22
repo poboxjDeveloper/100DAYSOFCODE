@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.4.1",
+    "browserslist": "^4.20.2",
+    "parcel": "^2.4.1"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --out-dir dist"
+  },
+  "name": "learn-svg-js",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {}
+}
