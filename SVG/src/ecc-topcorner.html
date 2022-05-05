@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ecc Top Corner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.scss" />
+
+    <style>
+      li {
+        padding: 1em;
+        display: inline-block;
+        position: relative;
+      }
+      #shape2 {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="back"><a href="index.html">back</a></nav>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="svg-container">
+        <svg
+          id="shap1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 213.05 97.3"
+        >
+          <g style="opacity: 0.6">
+            <path
+              d="M159.81,78.96C125.25,60.83,107.72,34.44,107.72,.5V0h-2.4V.5c0,33.94-17.52,60.33-52.08,78.46-14.95,7.84-32.74,13.95-53.24,18.34H213.05c-20.5-4.39-38.29-10.5-53.24-18.34Z"
+              style="fill: #ff0"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <div class="svg-container">
+        <button id="cmd2">add viewbox</button>
+
+        <div style="width: 100px; height: 100px; background-color: cadetblue">
+          <svg id="shape2" xmlns="http://www.w3.org/2000/svg">
+            <g style="opacity: 0.6">
+              <path
+                d="M159.81,78.96C125.25,60.83,107.72,34.44,107.72,.5V0h-2.4V.5c0,33.94-17.52,60.33-52.08,78.46-14.95,7.84-32.74,13.95-53.24,18.34H213.05c-20.5-4.39-38.29-10.5-53.24-18.34Z"
+                style="fill: #ff0"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="svg-container">
+        <button id="cmd3">add viewbox</button>
+
+        <div style="width: 100px; height: 100px; background-color: chartreuse">
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            id="shape3"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <defs>
+              <style>
+                .b {
+                  fill: #fff;
+                }
+                .c {
+                  opacity: 0.6;
+                }
+              </style>
+            </defs>
+            <g class="c">
+              <path
+                class="b"
+                d="M75.01,81.15C58.79,62.52,50.56,35.39,50.56,.51V0h-1.13V.51c0,34.88-8.22,62.01-24.45,80.63-7.02,8.06-15.37,14.34-24.99,18.85H100c-9.62-4.51-17.97-10.8-24.99-18.85Z"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script src="ecc-topcorner.js"></script>
+  </body>
+</html>
