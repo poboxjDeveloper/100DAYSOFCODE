@@ -17,6 +17,14 @@
         width: 100%;
         height: 100%;
       }
+
+      .subnavigation {
+        width: 100%;
+        height: 120px;
+        background-color: blueviolet;
+        position: absolute;
+        left: 0;
+      }
     </style>
   </head>
   <body>
@@ -29,9 +37,22 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+      <div id="subnav_container">
+        <div id="shape_container" style="position: absolute; left: -5000px">
+          <svg id="theShape" xmlns="http://www.w3.org/2000/svg">
+            <g style="opacity: 0.6">
+              <path
+                d="M159.81,78.96C125.25,60.83,107.72,34.44,107.72,.5V0h-2.4V.5c0,33.94-17.52,60.33-52.08,78.46-14.95,7.84-32.74,13.95-53.24,18.34H213.05c-20.5-4.39-38.29-10.5-53.24-18.34Z"
+                style="fill: #f00"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+
       <div class="svg-container">
         <svg
-          id="shap1"
+          id="shape1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 213.05 97.3"
         >
@@ -86,6 +107,17 @@
             </g>
           </svg>
         </div>
+      </div>
+
+      <div class="svg-container">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <g style="opacity: 0.6">
+            <path
+              d="M159.81,78.96C125.25,60.83,107.72,34.44,107.72,.5V0h-2.4V.5c0,33.94-17.52,60.33-52.08,78.46-14.95,7.84-32.74,13.95-53.24,18.34H213.05c-20.5-4.39-38.29-10.5-53.24-18.34Z"
+              style="fill: #f00"
+            />
+          </g>
+        </svg>
       </div>
     </div>
 
