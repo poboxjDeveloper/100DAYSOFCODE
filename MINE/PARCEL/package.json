@@ -1,17 +1,16 @@
 {
   "name": "parcel-project",
   "version": "1.0.0",
-  "main": "index.js",
   "source": "/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "license": "MIT",
-  "devDependencies": {
-    "@parcel/transformer-sass": "2.4.1",
-    "parcel": "^2.4.1"
-  },
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "start": "parcel watch",
-    "build": "parcel build --out-dir dist"
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.7.0",
+    "parcel": "^2.7.0"
   }
 }
